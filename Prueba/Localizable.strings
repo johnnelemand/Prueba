@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Prueba
+
+  Created by Johnne Lemand on 08/12/23.
+  
+*/
+
+
+"TITLE_VIEW" = "Camara";
+"TITLE_VIEW2" = "Foto";
+"TITLE_VIEW3" = "Nombre Completo";
+"TITLE_VIEW4" = "Número Telefónico";
+"TITLE_VIEW5" = "Fecha Nacimiento";
+"TITLE_VIEW6" = "Sexo(Maculino / Femenino)";
+"TITLE_VIEW7" = "";
+
