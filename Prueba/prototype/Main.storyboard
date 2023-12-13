@@ -65,7 +65,7 @@
         <!--Data Capture View Controller-->
         <scene sceneID="Nax-Xu-9Ru">
             <objects>
-                <viewController storyboardIdentifier="cellData" id="yTu-FN-AmQ" customClass="DataCaptureViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataCaptureViewController" id="yTu-FN-AmQ" customClass="DataCaptureViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljT-qG-PbE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
