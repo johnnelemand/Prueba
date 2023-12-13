@@ -29,17 +29,14 @@ final class prototypePresenter {
 
 extension prototypePresenter: prototypePresenterInterface {
     
-    func performPassData(with parameter: String){
-        openDatacell()
-    }
-    
-    
     func openDatacell() {
-        _wireframe.navigate(to: .goToDatacell)
-        
+//        _wireframe.navigate(to: .goToDatacell(datoscam: datoscam))
     }
     
     
+    func performPassData(datoscam: String){
+        _wireframe.navigate(to: .goToDatacell(datoscam: datoscam))
+    }
     
     
 }

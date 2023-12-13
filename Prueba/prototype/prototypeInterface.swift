@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+// primero pasalos parametros  enum  case  para indicar lo que voy enviar parte 2 ponerle la func
 enum prototypeNavigationOption {
-     case goToDatacell
+    case goToDatacell(datoscam: String)
 }
 
 protocol prototypeWireframeInterface: WireframeInterface {
@@ -19,7 +19,7 @@ protocol prototypeViewInterface: ViewInterface {
 }
 
 protocol prototypePresenterInterface: PresenterInterface {
-    func performPassData(with parameter: String)
+    func performPassData(datoscam: String)
     func openDatacell()
   
 }

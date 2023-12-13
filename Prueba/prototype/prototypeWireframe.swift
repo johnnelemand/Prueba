@@ -25,8 +25,8 @@ final class prototypeWireframe: BaseWireframe {
         moduleViewController.presenter = presenter
     }
     
-    func openDatacell(){
-        let wireframe = DataCaptureWireframe()
+    func openDatacell(_ datacam : String){
+        let wireframe = DataCaptureWireframe(datacam: datacam)
         navigationController?.pushWireframe(wireframe)
     }
     
@@ -39,9 +39,9 @@ extension prototypeWireframe: prototypeWireframeInterface {
     
     func navigate(to option: prototypeNavigationOption) {
         switch option{
-        case .goToDatacell:
+        case .goToDatacell(let datacam):
             navigationController?.popViewController(animated: true)
-            openDatacell()
+            openDatacell(datacam)
             break
         }
     }

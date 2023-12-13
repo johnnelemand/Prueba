@@ -12,7 +12,7 @@ class DataCaptureViewController: UIViewController {
     
     var presenter: DataCapturePresenterInterface!
     
-//    var receivedOptions: [Option] = []
+    var receivedOptions: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()

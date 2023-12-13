@@ -14,6 +14,7 @@ class prototypeViewController: UIViewController{
     @IBOutlet weak var contact: UITableView!
     @IBOutlet weak var nextButton: UIButton!
     
+    var dataNav: UINavigationController = UINavigationController()
     var options: [Option] = [
             Option(title: "Cámara", isSelected: false),
             Option(title: "Foto", isSelected: false),
@@ -30,6 +31,16 @@ class prototypeViewController: UIViewController{
          contact.delegate = self
          contact.dataSource = self
          
+        
+        
+         //BUTTON PROPIETIES
+         nextButton.layer.cornerRadius = nextButton.frame.height / 2
+
+         nextButton.setTitle("Siguiente", for: .normal)
+         nextButton.setTitleColor(.white, for: .normal)
+         nextButton.backgroundColor = .blue
+         nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+
          
           
          //register cell
@@ -45,10 +56,10 @@ class prototypeViewController: UIViewController{
                 for option in selectedOptions {
                     switch option.title {
                     case "Cámara":
-                       
+                        
                         break
                     case "Foto":
-                        
+                         
                         break
                     case "Nombre completo":
                         
@@ -70,9 +81,33 @@ class prototypeViewController: UIViewController{
                     }
                 }
                 
-            let parameterValue = "selectedOptions"
-            self.presenter.performPassData(with: parameterValue)
+        presenter.performPassData(datoscam: "data" )
             }
+    
+//    func openCamera(){
+//        let imagePiker = UIImagePickerController()
+//        imagePiker.delegate = self
+//        imagePiker.sourceType = .camera
+//        imagePiker.allowsEditing = false
+//
+//        present(imagePiker, animated: true, completion: nil)
+//    }
+//}
+//
+
+//extension prototypeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+//            // Aquí puedes utilizar la imagen capturada, por ejemplo, mostrarla en un imageView
+//            // imageView.image = pickedImage
+//        }
+//
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        picker.dismiss(animated: true, completion: nil)
+//    }
     
 }
 
